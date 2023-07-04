@@ -7,7 +7,7 @@ var conexion= mysql.createConnection({
     host : 'localhost',
     database : 'connect',
     user : 'root',
-    password : '',
+    password : 'rootroot',
 });
 
 conexion.connect(function(err) {
@@ -55,10 +55,10 @@ const login = (req, res) =>
         console.log (resultArray[0])
 
         if (resultArray[0] == 1)
-            res.send('Podes pasar papi')
+            res.send('Te logeaste exitosamente')
         
         else
-            res.send('NO CHORIZO NO')
+            res.send('Usuario y/o contraseña incorrecta')
         
     });
 
